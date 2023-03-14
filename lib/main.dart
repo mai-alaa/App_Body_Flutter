@@ -4,6 +4,8 @@ void main() {
   runApp(MyApp());
 }
 
+//SingleChildScrollView------>column &row
+//scrollDirection: Axis.horizontal---->row
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -33,44 +35,55 @@ class MyApp extends StatelessWidget {
             ),
           ],
         ),
-        body: Column(children: [
-          Expanded(
-            child: Container(
-              child: Text(
-                'First content',
-                style: TextStyle(
-                    fontSize: 30.0, color: Color.fromARGB(255, 2, 106, 119)),
-              ),
-            ),
-          ),
-          Expanded(
-            child: Container(
-              child: Text(
-                'Second content',
-                style: TextStyle(
-                    fontSize: 30.0, color: Color.fromARGB(255, 10, 72, 165)),
-              ),
-            ),
-          ),
-          Expanded(
-            child: Container(
-              child: Text(
-                'Third content',
-                style: TextStyle(
-                    fontSize: 30.0, color: Color.fromARGB(255, 93, 2, 43)),
-              ),
-            ),
-          ),
-          Expanded(
-            child: Container(
-              child: Text(
-                'Forth content',
-                style: TextStyle(
-                    fontSize: 30.0, color: Color.fromARGB(255, 78, 2, 16)),
-              ),
-            ),
-          ),
-        ]),
+        body: Container(
+          color: Colors.blueAccent,
+          width: double.infinity,
+          child: Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Expanded(
+                  child: Container(
+                    child: Text(
+                      'First content',
+                      style: TextStyle(
+                          fontSize: 30.0,
+                          color: Color.fromARGB(255, 2, 106, 119)),
+                    ),
+                  ),
+                ),
+                Expanded(
+                  child: Container(
+                    child: Text(
+                      'Second content',
+                      style: TextStyle(
+                          fontSize: 30.0,
+                          color: Color.fromARGB(255, 10, 72, 165)),
+                    ),
+                  ),
+                ),
+                Expanded(
+                  child: Container(
+                    child: Text(
+                      'Third content',
+                      style: TextStyle(
+                          fontSize: 30.0,
+                          color: Color.fromARGB(255, 93, 2, 43)),
+                    ),
+                  ),
+                ),
+                Expanded(
+                  child: Container(
+                    child: Text(
+                      'Forth content',
+                      style: TextStyle(
+                          fontSize: 30.0,
+                          color: Color.fromARGB(255, 78, 2, 16)),
+                    ),
+                  ),
+                ),
+              ]),
+        ),
       ),
     );
   }
